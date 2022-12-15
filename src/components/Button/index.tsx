@@ -4,7 +4,7 @@ type ChackraProps = React.ComponentProps<typeof ChackraButton>;
 
 function Button({ onClick, children, ...rest }: ChackraProps) {
   return (
-    <ChackraButton onChange={onClick} {...rest}>
+    <ChackraButton onClick={onClick} {...rest}>
       {children}
     </ChackraButton>
   );

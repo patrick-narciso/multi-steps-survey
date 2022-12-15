@@ -8,31 +8,8 @@ interface SelectProps extends ChackraSelectProps {
   value: string;
 }
 
-function Select({
-  children,
-  isDisabled,
-  isInvalid,
-  isReadOnly,
-  isRequired,
-  variant = 'outline',
-  size,
-  onChange,
-  value,
-}: SelectProps) {
-  return (
-    <ChackraSelect
-      isDisabled={isDisabled}
-      isInvalid={isInvalid}
-      isReadOnly={isReadOnly}
-      isRequired={isRequired}
-      size={size}
-      variant={variant}
-      onChange={onChange}
-      value={value}
-    >
-      {children}
-    </ChackraSelect>
-  );
+function Select({ onChange, value, ...rest }: SelectProps) {
+  return <ChackraSelect onChange={onChange} value={value} {...rest} />;
 }
 
 export default Select;
