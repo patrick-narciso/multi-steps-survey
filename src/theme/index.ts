@@ -4,7 +4,8 @@ export default extendTheme({
   styles: {
     global: {
       'html, body': {
-        backgroundColor: 'gray.300',
+        backgroundColor: 'gray.600',
+        color: 'white',
         lineHeight: 'tall',
       },
       a: {
