@@ -5,7 +5,6 @@ export default extendTheme({
     global: {
       'html, body': {
         backgroundColor: 'gray.600',
-        color: 'white',
         lineHeight: 'tall',
       },
       a: {
