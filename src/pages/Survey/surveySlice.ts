@@ -3,8 +3,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export interface SurveyState {
-  name?: string | null;
-  email?: string | null;
+  name?: string;
+  email?: string;
   age: number;
   gender: string;
   favoriteBook: string;
@@ -13,8 +13,8 @@ export interface SurveyState {
 }
 
 export interface Identity {
-  name: string | null;
-  email: string | null;
+  name: string | undefined;
+  email: string | undefined;
 }
 
 export interface Details {
