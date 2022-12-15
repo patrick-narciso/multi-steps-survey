@@ -9,6 +9,7 @@ export interface SurveyState {
   gender: string;
   favoriteBook: string;
   favoriteColors: string[] | string;
+  step: number;
 }
 
 export interface Identity {
@@ -33,6 +34,7 @@ const initialState: SurveyState = {
   gender: '',
   favoriteBook: '',
   favoriteColors: [],
+  step: 1,
 };
 
 export const surveySlice = createSlice({
@@ -51,9 +53,21 @@ export const surveySlice = createSlice({
       state.favoriteBook = action.payload.favoriteBook;
       state.favoriteColors = action.payload.favoriteColors;
     },
+    increaseStep: (state) => {
+      state.step += 1;
+    },
+    decreaseStep: (state) => {
+      state.step -= 1;
+    },
   },
 });
 
-export const { addIdentity, addDetails, addFavorites } = surveySlice.actions;
+export const {
+  addIdentity,
+  addDetails,
+  addFavorites,
+  increaseStep,
+  decreaseStep,
+} = surveySlice.actions;
 
 export default surveySlice.reducer;
