@@ -6,8 +6,8 @@ import { RootState } from '../../../../redux/store';
 import { addIdentity, increaseStep } from '../../surveySlice';
 
 export default function Identity() {
-  const dispatch = useAppDispatch();
   const { name, email } = useAppSelector((state: RootState) => state.survey);
+  const dispatch = useAppDispatch();
   const formik = useFormik({
     initialValues: {
       name,

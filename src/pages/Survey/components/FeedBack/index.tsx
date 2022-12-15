@@ -1,11 +1,22 @@
+import { useEffect } from 'react';
 import {
   Alert,
   AlertDescription,
   AlertIcon,
   AlertTitle,
 } from '@chakra-ui/react';
+import { useAppDispatch } from '../../../../redux/hooks';
+import { submitData } from '../../surveySlice';
 
 export default function Feedback() {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch(submitData());
+    }, 2000);
+  }, [dispatch]);
+
   return (
     <Alert
       status="success"

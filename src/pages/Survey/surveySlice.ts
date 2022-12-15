@@ -10,6 +10,7 @@ export interface SurveyState {
   favoriteBook: string;
   favoriteColors: (string | number)[] | undefined;
   step: number;
+  isSubmitted: boolean;
 }
 
 export interface Identity {
@@ -35,6 +36,7 @@ const initialState: SurveyState = {
   favoriteBook: '',
   favoriteColors: undefined,
   step: 1,
+  isSubmitted: false,
 };
 
 export const surveySlice = createSlice({
@@ -59,6 +61,9 @@ export const surveySlice = createSlice({
     decreaseStep: (state) => {
       state.step -= 1;
     },
+    submitData: (state) => {
+      state.isSubmitted = true;
+    },
   },
 });
 
@@ -68,6 +73,7 @@ export const {
   addFavorites,
   increaseStep,
   decreaseStep,
+  submitData,
 } = surveySlice.actions;
 
 export default surveySlice.reducer;
