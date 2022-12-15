@@ -21,9 +21,7 @@ const DetailsSchema = Yup.object().shape({
 
 export default function Details() {
   const dispatch = useAppDispatch();
-  const { age, gender, step } = useAppSelector(
-    (state: RootState) => state.survey
-  );
+  const { age, gender } = useAppSelector((state: RootState) => state.survey);
   const formik = useFormik({
     initialValues: {
       age,
@@ -40,7 +38,7 @@ export default function Details() {
       <Box bg="white" p={6} rounded="md">
         <VStack align="center">
           <Heading mb={4} size="md">
-            Step 2 of {step} - Details
+            Step 2 of 4 - Details
           </Heading>
         </VStack>
         <form onSubmit={formik.handleSubmit}>

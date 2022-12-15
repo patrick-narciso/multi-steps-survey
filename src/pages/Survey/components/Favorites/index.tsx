@@ -25,7 +25,7 @@ const FavoritesSchema = Yup.object().shape({
 
 export default function Favorites() {
   const dispatch = useAppDispatch();
-  const { favoriteBook, favoriteColors, step } = useAppSelector(
+  const { favoriteBook, favoriteColors } = useAppSelector(
     (state: RootState) => state.survey
   );
   const formik = useFormik({
@@ -44,7 +44,7 @@ export default function Favorites() {
       <Box bg="white" p={6} rounded="md">
         <VStack align="center">
           <Heading mb={4} size="md">
-            Step 3 of {step} - Favorites
+            Step 3 of 4 - Favorites
           </Heading>
         </VStack>
         <form onSubmit={formik.handleSubmit}>

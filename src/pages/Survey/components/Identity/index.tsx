@@ -7,9 +7,7 @@ import { addIdentity, increaseStep } from '../../surveySlice';
 
 export default function Identity() {
   const dispatch = useAppDispatch();
-  const { name, email, step } = useAppSelector(
-    (state: RootState) => state.survey
-  );
+  const { name, email } = useAppSelector((state: RootState) => state.survey);
   const formik = useFormik({
     initialValues: {
       name,
@@ -25,7 +23,7 @@ export default function Identity() {
       <Box bg="white" p={6} rounded="md">
         <VStack align="center">
           <Heading mb={4} size="md">
-            Step 1 of {step} - Identity
+            Step 1 of 4 - Identity
           </Heading>
         </VStack>
         <form onSubmit={formik.handleSubmit}>
