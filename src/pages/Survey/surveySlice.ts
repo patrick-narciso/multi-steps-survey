@@ -5,7 +5,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 export interface SurveyState {
   name?: string;
   email?: string;
-  age: number;
+  age: string;
   gender: string;
   favoriteBook: string;
   favoriteColors: string[] | string;
@@ -18,7 +18,7 @@ export interface Identity {
 }
 
 export interface Details {
-  age: number;
+  age: string;
   gender: string;
 }
 
@@ -30,8 +30,8 @@ export interface Favorites {
 const initialState: SurveyState = {
   name: '',
   email: '',
-  age: 0,
-  gender: '',
+  age: '',
+  gender: 'male',
   favoriteBook: '',
   favoriteColors: [],
   step: 1,
