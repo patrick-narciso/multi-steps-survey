@@ -1,6 +1,7 @@
 import { useAppSelector } from '../../redux/hooks';
 import { RootState } from '../../redux/store';
 import Details from './components/Details';
+import Favorites from './components/Favorites';
 import Identity from './components/Identity';
 
 interface Steps {
@@ -12,6 +13,7 @@ export default function Survey() {
   const steps: Steps = {
     1: <Identity />,
     2: <Details />,
+    3: <Favorites />,
   };
 
   return steps[step];

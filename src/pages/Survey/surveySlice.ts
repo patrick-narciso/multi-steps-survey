@@ -8,7 +8,7 @@ export interface SurveyState {
   age: string;
   gender: string;
   favoriteBook: string;
-  favoriteColors: string[] | string;
+  favoriteColors: (string | number)[] | undefined;
   step: number;
 }
 
@@ -24,7 +24,7 @@ export interface Details {
 
 export interface Favorites {
   favoriteBook: string;
-  favoriteColors: string[] | string;
+  favoriteColors: (string | number)[] | undefined;
 }
 
 const initialState: SurveyState = {
@@ -33,7 +33,7 @@ const initialState: SurveyState = {
   age: '',
   gender: 'male',
   favoriteBook: '',
-  favoriteColors: [],
+  favoriteColors: undefined,
   step: 1,
 };
 
