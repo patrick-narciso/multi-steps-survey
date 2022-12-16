@@ -19,7 +19,7 @@ export default function Identity() {
     },
   });
   return (
-    <Flex bg="gray.100" align="center" justify="center" h="100vh">
+    <Flex bg="gray.100" align="center" justify="center" h="600px">
       <Box bg="white" p={6} rounded="md">
         <VStack align="center">
           <Heading mb={4} size="md">
