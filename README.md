@@ -103,12 +103,6 @@ In your html website:
 
 1: If you are testing with a local HTML with the local file, uses a live-server or something like that, because some current browsers eg Google Chrome are only accepting HTTP or HTTPS requests and will block your app because of `File://`.
 
-2: Make sure that your website has a div with root id in the index.html, Otherwise creates one:
-
-```
- <div id="root"></div>
-```
-
 Add this file in the end of the body, example:
 
 ```
@@ -131,7 +125,7 @@ You can contribute if you want :grin:
 
 - Features must be segregated in use cases;
 - keys must be placed on secrets (for future envinronments cases);
-- Improve the Rollup config to reduce the bundle and prevent the user from needing a root div on their page;
+- Improve the Rollup config to reduce the bundle;
 - Coupling must be reduced to minimum;
 - Some project structural issues must be fixed;
 - Unit and integration tests coverage must be added/increased;
